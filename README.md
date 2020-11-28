@@ -1,4 +1,4 @@
-# ReinforcementLearn
+# ReinforceBots
 <p> 
   This is a part of a research project consolidating the concepts of Reinforcement Learning (RL) and Natural Language Processing (NLP). In this project we will be developing a chatbot by combining RL and NLP concepts. Combining NLP and RL is a great deal !!! So in this project we will explore some corresponding research papers and will go through them   thoroughly to grab the relevence concepts and develop the chatbot!! 
 </p>
