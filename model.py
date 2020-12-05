@@ -1,1 +1,1 @@
-#This file contains the model for the chatbot
+#This file contains the model for the RL based chatbot
