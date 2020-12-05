@@ -18,7 +18,7 @@ def index():
 #function for the bot response
 def get_bot_response():
     userText = request.args.get('msg')
-    return str("Hi , How are you?")
+    return str("I am fine , How are you?")
 
 if __name__ == "__main__":
     app.run()

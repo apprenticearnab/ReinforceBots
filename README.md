@@ -23,7 +23,7 @@ This theory identifies five factors which often abbreviated in the acronyms OCEA
 For getting more detailed information regarding our RL based chatbot model that best fits with our project and also how NLP can be used for tracking behavioural traits you can give a look at the two papers provided below : 
 <ol>
 <li><a href="https://arxiv.org/pdf/1606.01541.pdf"> Paper for RL based Chatbot</a></li>
-<li><a href="https://drive.google.com/file/d/1nPJ6coYUiRnx-2oAgKbMpCRDdbqgy9pZ/view?usp=sharing"> Paper for DL based behavioural trait tracking</a></li>
+<li><a href="https://drive.google.com/file/d/1htup9eBUCSfxyt6NHavnLZGShR1sAAOF/view?usp=sharing"> Paper for DL based behavioural trait tracking</a></li>
 </ol>
 </p>
 <p>

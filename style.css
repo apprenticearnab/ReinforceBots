@@ -1,6 +1,6 @@
 #textInput {
     border: none;
-    border-bottom: 3px solid aqua;
+    border-bottom: 3px solid rgb(6, 107, 240);
 }
 
 .userText {
@@ -11,7 +11,7 @@
     line-height: 30px;
 }
 .userText span {
-    background-color: #009688;
+    background-color: #0080ff;
     padding: 10px;
     border-radius: 2px;
 }
