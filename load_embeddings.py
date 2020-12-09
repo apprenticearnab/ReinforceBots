@@ -29,7 +29,7 @@ def sentence2embeddings(sentences,embed_model,sentence_size):
     assert len(sentences[0]) == sentence_size
     
     for sentence in sentences:
-        sentence_vector = torch.transpose(generate_word2vec_tensor(sentence,google_vectors),0,1)
+        sentence_vector = torch.transpose(generate_word2vec_tensor(sentence,embed_model),0,1)
         sentence_vector = sentence_vector.reshape((1,sentence_vector.shape[0],sentence_vector.shape[1]))
         sentence_batch.append(sentence_vector)
     
