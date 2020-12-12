@@ -52,6 +52,12 @@ class aggregate_doc(nn.Module):
         self.relu3 = nn.ReLU()
         self.max_pool3 = nn.MaxPool1d(self.sentence_size-3+1)
         self.flat3 = nn.Flatten()
+
+    # Classification layer
+    	self.lin1  = nn.Linear(684,200)
+    	self.lin2  = nn.Linear(200,2)
+    	self.relu4 = nn.ReLU()
+    	self.sig1  = nn.Sigmoid()
       
       
     def forward(self, x):                               #aggregates word vectors to a sentence vector
@@ -89,7 +95,25 @@ class aggregate_doc(nn.Module):
         
         
         
-        
+    def aggregate_mairesse2doc(self,doc_agg,mairess_feat): # Aggregates the mairesse features with the document vector
+
+    	assert doc_agg.shape[0] == 600
+    	assert mairess_feat.shape[0] == 84
+
+    	return torch.cat(doc_agg,mairess_feat, dim=0)
+
+    def classification(self,doc_vec): # Final classification network
+
+    	assert doc_vec.shape[0] == 684
+
+    	out = self.lin1(doc_vec)
+    	out = self.relu4(out)
+    	out = self.lin2(out)
+    	out = self.sig1(out)
+
+    	return out
+
+
         
 
 
