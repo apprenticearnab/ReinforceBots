@@ -179,33 +179,33 @@ class agent():
 	        # Readout layer
 	        self.fc_dec = nn.Linear(self.hidden_dec, self.output_dec)
 	    
-	    def forward_dec(self, x, seq):
-	        # Initialize hidden state with zeros
-	        #######################
-	        #  USE GPU FOR MODEL  #
-	        #######################
+	def forward_dec(self, x, seq):
+        # Initialize hidden state with zeros
+        #######################
+        #  USE GPU FOR MODEL  #
+        #######################
 
-	        if torch.cuda.is_available():
-	            h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim).cuda())
-	        else:
-	            h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
-	        
-	        # Initialize cell state
-	        if torch.cuda.is_available():
-	            c0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim).cuda())
-	        else:
-	            c0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
-	        
-	        # One time step
-	        out, (hn, cn) = self.lstm(x, (h0,c0))
-	        
-	        # Index hidden state of last time step
-	        # out.size() --> 100, 28, 100
-	        # out[:, -1, :] --> 100, 100 --> just want last time step hidden states! 
-	        for i in range(seq):
-	        	out = torch.cat(self.fc(out[:, i, :]),dim=0) 
-	        # out.size() --> 100, 10
-	        return out
+        if torch.cuda.is_available():
+            h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim).cuda())
+        else:
+            h0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
+        
+        # Initialize cell state
+        if torch.cuda.is_available():
+            c0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim).cuda())
+        else:
+            c0 = Variable(torch.zeros(self.layer_dim, x.size(0), self.hidden_dim))
+        
+        # One time step
+        out, (hn, cn) = self.lstm(x, (h0,c0))
+        
+        # Index hidden state of last time step
+        # out.size() --> 100, 28, 100
+        # out[:, -1, :] --> 100, 100 --> just want last time step hidden states! 
+        for i in range(seq):
+        	out = torch.cat(self.fc(out[:, i, :]),dim=0) 
+        # out.size() --> 100, 10
+        return out
 
 
 
