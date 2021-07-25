@@ -28,7 +28,4 @@ For getting more detailed information regarding our RL based chatbot model that 
 <li><a href="https://drive.google.com/file/d/1htup9eBUCSfxyt6NHavnLZGShR1sAAOF/view?usp=sharing"> Paper for DL based behavioural trait tracking</a></li>
 </ol>
 </p>
-<p>
-<h1>Prerequisites</h1> 
-Basic Knowledge about RL , NLP or DL will be helpful .
-</p> 
+
