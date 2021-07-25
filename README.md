@@ -4,7 +4,9 @@
 </p>
 
 <p> 
-  We'll be developing the chatbot based on "Big Five" personality traits analysis by continious interaction with the user. The analysis will be done by constructive interactive sessions with the user. When we will arrive to the decison about the correct trait of the user then we'll be doing more and more user involving conversations.
+  We'll be developing the chatbot based on "Big Five" personality traits analysis by continious interaction with the user. The analysis will be done by constructive interactive sessions with the user. When we will arrive to the decison about the correct trait of the user then we'll be doing more and more user involving conversations.Generally the model modifies the output by improving the word selection mechanism after each conversation in a Reinforcement Learning way.
+</p>
+<p>
 The "Big Five" personality traits is the model to comprehend the relationship between personality and academic behaviors. This was first developed in 1960s when researchers began to study the relationships between a large number of verbal descriptors related to personality traits. They reduced the lists of these descriptors by 5–10 fold and then used factor analysis to group the remaining traits (using data mostly based upon people's estimations, in self-report questionnaire and peer ratings) in order to find the underlying factors of personality.
 </p>
 <p>
